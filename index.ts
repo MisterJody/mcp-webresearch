@@ -16,7 +16,7 @@ import {
     ErrorCode,
     TextContent,
     ImageContent,
-} from "@modelcontextprotocol/sdk/types.js";
+} from "@modelcontextprotocol/sdk/types";
 
 // Web scraping and content processing dependencies
 import { chromium, Browser, Page } from 'playwright';
@@ -1235,6 +1235,5 @@ async function cleanup(): Promise<void> {
 
 // Register cleanup handlers
 process.on('exit', cleanup);
-process.on('SIGTERM', cleanup);
 process.on('SIGINT', cleanup);
 process.on('SIGHUP', cleanup);
